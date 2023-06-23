@@ -10,3 +10,30 @@ img{
   background-color: blueviolet;
   margin: 1rem auto;
 }
+.cart-each, .cart-amount{
+  width: 800px;
+  margin: 1rem auto;
+  text-align: right;
+}
+.cart-each{
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+}
+.cart-title{
+  width: 400px;
+}
+ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 3rem;
+}
+li {
+  display: inline-block;
+  width: 50px;
+}

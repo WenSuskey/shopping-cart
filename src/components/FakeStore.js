@@ -5,11 +5,8 @@ import { addToCart } from "./reducers/cartReducer"
 
 export default function FakeStore(){
     const storeList = useSelector(state=>state.fakeStore.list)
-    const tempCart = useSelector(state=>state.carts.carts)
-    console.log(tempCart)
     const dispatch = useDispatch()
     useEffect(()=>{
-        console.log(storeList)
         dispatch(fetchFakeStore())
     },[])
     function handleAddToCart(value){

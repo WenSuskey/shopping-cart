@@ -16,14 +16,14 @@ export default function Carts(){
         <h2>Your cart:</h2>
             {tempCart.map(good=>{
                 return(
-                    <div key={good.id}>
-                    <div>{good.title}</div>
-                    <div>{good.price}</div>
-                    <button onClick={()=>handleRemove(good)}>Remove</button>
+                    <div key={good.id} className="cart-each">
+                      <div className="cart-title">{good.title}</div>
+                      <div>{good.price}</div>
+                      <button onClick={()=>handleRemove(good)}>Remove</button>
                     </div>
                 )
             })}
-            <div>total Amoutn:{total}</div>
+            <div className="cart-amount">total Amoutn:{total}</div>
         </div>
     )
 }
