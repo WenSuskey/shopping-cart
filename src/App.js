@@ -6,7 +6,7 @@ import { fakeStoreReducer } from './components/reducers/fakeStoreReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import cartReducer from './components/reducers/cartReducer';
-import { BrowserRouter as Router, Link, Switch,Route, } from 'react-router-dom';
+import { BrowserRouter as Router, Switch,Route, } from 'react-router-dom';
 import Carts from './components/Carts';
 import NavBar from './components/NavBar';
 
@@ -18,40 +18,22 @@ function App() {
 
   const store = createStore(rootReducer,applyMiddleware(thunk))
 
-  function Home() {
-    return <h2>Home</h2>;
-  }
-  
-  function About() {
-    return <h2>About</h2>;
-  }
-  
-  function Users() {
-    return <h2>Users</h2>;
-  }
   return (
     <Provider store={store}>
-
-    <Router>
-      <div>
-        <NavBar/>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route exact path="/cart">
-            <Carts />
-          </Route>
-          <Route exact path="/">
-            <FakeStore />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-
-
-     
-    </Provider>
+      <Router>
+        <div>
+          <NavBar/>
+          <Switch>
+            <Route exact path="/cart">
+              <Carts />
+            </Route>
+            <Route exact path="/">
+              <FakeStore />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+   </Provider>
   );
 }
 

@@ -8,7 +8,7 @@ export default function FakeStore(){
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchFakeStore())
-    },[])
+    },[dispatch])
     function handleAddToCart(value){
         dispatch(addToCart(value))
     }
@@ -16,6 +16,7 @@ export default function FakeStore(){
     return(
         <div className="superStore">
             <h1>Super Store</h1>
+            <div className="grid-con">
             {storeList.map(good=>{
                 return(
                     <div className="eachgood" key={good.id}>
@@ -23,12 +24,13 @@ export default function FakeStore(){
                         <div>
                             <h5>{good.title}</h5>
                             <p>{good.description}</p>
-                            <h3>{good.price}</h3>
-                            <button onClick={()=> handleAddToCart(good)}>add to cart & buy it</button>
+                            <h3>$ {good.price}</h3>
+                            <button className="store-button" onClick={()=> handleAddToCart(good)}>add to cart & buy it</button>
                         </div>
                     </div>
                 )
             })}
+            </div>
         </div>
     )
 }

@@ -34,7 +34,7 @@ export default function Carts(){
                     </div>
                 )
             })}
-            <div className="cart-amount">total Amoutn:{total}</div>
+            <div className="cart-amount">total Amoutn: ${total}</div>
         </div>
     )
 }

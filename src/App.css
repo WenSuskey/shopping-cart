@@ -1,14 +1,35 @@
 .superStore{
   text-align: center;
-  background-color: lightblue;
+}
+.grid-con{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto ;
+  column-gap: 50px;
+}
+@media only screen and (max-width: 900px) {
+  body {
+    .grid-con{
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto  ;
+      column-gap: 50px;
+    }
+  }
+}
+.store-button{
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }
 img{
   width: 100px;
 }
 .eachgood{
   width: 400px;
-  background-color: blueviolet;
   margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid darkgray;
+  border-radius: 1rem;
 }
 .cart, .cart-each, .cart-amount{
   width: 800px;
