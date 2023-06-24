@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import cartReducer from './components/reducers/cartReducer';
 import { BrowserRouter as Router, Link, Switch,Route, } from 'react-router-dom';
 import Carts from './components/Carts';
+import NavBar from './components/NavBar';
 
 function App() {
   const rootReducer = combineReducers({
@@ -33,16 +34,7 @@ function App() {
 
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Store</Link>
-            </li>
-            <li>
-              <Link to="/cart">Cart</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar/>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

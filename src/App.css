@@ -10,10 +10,9 @@ img{
   background-color: blueviolet;
   margin: 1rem auto;
 }
-.cart-each, .cart-amount{
+.cart, .cart-each, .cart-amount{
   width: 800px;
-  margin: 1rem auto;
-  text-align: right;
+  margin: auto;
 }
 .cart-each{
   display: flex;
@@ -23,17 +22,35 @@ img{
   padding: 2rem 4rem;
   border-radius: 1rem;
 }
+.cart-amount{
+  margin-top: 2rem;
+  text-align: right;
+}
 .cart-title{
   width: 400px;
 }
 ul {
   display: inline;
   list-style: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 li {
   display: inline-block;
   width: 50px;
+}
+nav{
+  display: flex;
+  border-bottom: 1px solid black;
+  height: 3rem;
+}
+.logo{
+  width: 50px;
+}
+.cart-price{
+  justify-content: space-between;
+  width: 140px;
+  display: flex;
+  direction: row;
 }
